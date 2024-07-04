@@ -1,0 +1,106 @@
+[gd_scene load_steps=5 format=3 uid="uid://ba2l2pxd1b73"]
+
+[ext_resource type="FontFile" uid="uid://dn5ejfrfxcj1w" path="res://assets/Kenney Thick.ttf" id="1_7g1si"]
+[ext_resource type="Script" path="res://ui/hud.gd" id="1_xhvse"]
+[ext_resource type="Texture2D" uid="uid://c472ct2f8nkh6" path="res://assets/heart.png" id="2_r2owc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fvg15"]
+font = ExtResource("1_7g1si")
+font_size = 48
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[node name="HUD" type="MarginContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 20
+script = ExtResource("1_xhvse")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Score" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "100"
+label_settings = SubResource("LabelSettings_fvg15")
+
+[node name="LifeCounter" type="HBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="L1" type="TextureRect" parent="HBoxContainer/LifeCounter"]
+layout_mode = 2
+texture = ExtResource("2_r2owc")
+stretch_mode = 5
+
+[node name="L2" type="TextureRect" parent="HBoxContainer/LifeCounter"]
+layout_mode = 2
+texture = ExtResource("2_r2owc")
+stretch_mode = 5
+
+[node name="L3" type="TextureRect" parent="HBoxContainer/LifeCounter"]
+layout_mode = 2
+texture = ExtResource("2_r2owc")
+stretch_mode = 5
+
+[node name="L4" type="TextureRect" parent="HBoxContainer/LifeCounter"]
+layout_mode = 2
+texture = ExtResource("2_r2owc")
+stretch_mode = 5
+
+[node name="L5" type="TextureRect" parent="HBoxContainer/LifeCounter"]
+layout_mode = 2
+texture = ExtResource("2_r2owc")
+stretch_mode = 5
+
+[node name="Timer" type="Control" parent="."]
+layout_mode = 2
+
+[node name="limitedTime" type="Label" parent="Timer"]
+layout_mode = 0
+offset_left = 359.0
+offset_top = -5.0
+offset_right = 441.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.494118, 0.494118, 0.494118, 1)
+theme_override_fonts/font = ExtResource("1_7g1si")
+theme_override_font_sizes/font_size = 22
+text = "00."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="limitedTime2" type="Label" parent="Timer"]
+layout_mode = 0
+offset_left = 411.0
+offset_top = -4.0
+offset_right = 501.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.494118, 0.494118, 0.494118, 1)
+theme_override_fonts/font = ExtResource("1_7g1si")
+theme_override_font_sizes/font_size = 22
+text = "00."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="limitedTime3" type="Label" parent="Timer"]
+layout_mode = 0
+offset_left = 462.0
+offset_top = -4.0
+offset_right = 551.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.494118, 0.494118, 0.494118, 1)
+theme_override_fonts/font = ExtResource("1_7g1si")
+theme_override_font_sizes/font_size = 22
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
